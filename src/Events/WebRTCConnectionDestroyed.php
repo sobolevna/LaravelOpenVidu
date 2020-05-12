@@ -117,6 +117,7 @@ class WebRTCConnectionDestroyed
         $this->sessionId = $data['sessionId'];
         $this->timestamp = $data['timestamp'];
         $this->participantId = $data['participantId'];
+        $this->connection = $data['connection'];
         if (array_key_exists('receivingFrom', $data)) {
             $this->receivingFrom = $data['receivingFrom'];
         }

@@ -96,7 +96,8 @@ class WebRTCConnectionCreated
         $this->sessionId = $data['sessionId'];
         $this->timestamp = $data['timestamp'];
         $this->participantId = $data['participantId'];
-        if (array_key_exists('receivingFrom', $data)) {
+        $this->connection = $data['connection'];
+        if ($this->connection == 'INBOUND' && array_key_exists('receivingFrom', $data)) {
             $this->receivingFrom = $data['receivingFrom'];
         }
         $this->audioEnabled = $data['audioEnabled'];
